@@ -54,4 +54,30 @@
 #define USART6_BASEADDR					(APB2PERPH_BASEADDR + 0x1400)
 
 
+
+/****************************** peripheral register definition structures ********************/
+
+/*
+ * Note: Registers of periphers are specific to MCU
+ * e.g: Number of registers of SPI peripheral of STM32F4x family of MCUs may be diffrent (more or less)
+ * Compared to number of registers of SPI peripheral of SPM32Lx or STMF0x maily MCUs
+ * pPlease check your device RM
+ *
+ */
+
+typedef struct
+{
+	uint32_t	MODER;
+	uint32_t	OTYPER;
+	uint32_t	OSPEEDR;
+	uint32_t	PUPDR;
+	uint32_t	IDR;
+	uint32_t	ODR;
+	uint32_t	BSRR;
+	uint32_t	LCKR;
+	uint32_t	AFR[2];
+}GPIO_RegDef_t;
+
+
+
 #endif /* INC_STM32F407XX_H_ */

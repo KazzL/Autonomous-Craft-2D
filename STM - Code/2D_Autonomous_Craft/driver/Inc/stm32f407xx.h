@@ -8,6 +8,8 @@
 #ifndef INC_STM32F407XX_H_
 #define INC_STM32F407XX_H_
 
+#define __vo volatile
+
 /* Base Address of Flash and SRAM Memories */
 #define FLASH_BASEADDR				0x08000000U
 #define SRAM1_BASEADDR				0x20000000U
@@ -67,15 +69,15 @@
 
 typedef struct
 {
-	uint32_t	MODER;			//GPIO port mode register
-	uint32_t	OTYPER;			//GPIO port output type register
-	uint32_t	OSPEEDR;		//GPIO port output speed register
-	uint32_t	PUPDR;			//GPIO port pull-up/pull-down register
-	uint32_t	IDR;			//GPIO port input data register
-	uint32_t	ODR;			//GPIO port output data register
-	uint32_t	BSRR;			//GPIO port bit set/reset register
-	uint32_t	LCKR;			//GPIO port configuration lock register
-	uint32_t	AFR[2];			//GPIO alternate function register
+	__vo uint32_t	MODER;			//GPIO port mode register
+	__vo uint32_t	OTYPER;			//GPIO port output type register
+	__vo uint32_t	OSPEEDR;		//GPIO port output speed register
+	__vo uint32_t	PUPDR;			//GPIO port pull-up/pull-down register
+	__vo uint32_t	IDR;			//GPIO port input data register
+	__vo uint32_t	ODR;			//GPIO port output data register
+	__vo uint32_t	BSRR;			//GPIO port bit set/reset register
+	__vo uint32_t	LCKR;			//GPIO port configuration lock register
+	__vo uint32_t	AFR[2];			//GPIO alternate function register
 }GPIO_RegDef_t;
 
 

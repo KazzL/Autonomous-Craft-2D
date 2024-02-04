@@ -42,4 +42,37 @@
 #define SYSCTL_UPPER_BASEADDR            0xE004_4000
 
 
+/****************************** peripheral register definition structures ********************/
+/*
+ * Note: As each set of ports refers to a pair of ports 1/2, 3/4, 5/6, 7/8, 9/10, the struct has been set to refer to port X (odd numbers) and port Y
+ * (even numbers). This allows for all ports to be referenced cleanly and easily
+ */
+typedef struct \
+{
+    __vo uint32_t   P_X_IN;
+    __vo uint32_t   P_Y_IN;
+    __vo uint32_t   P_X_OUT;
+    __vo uint32_t   P_Y_OUT;
+    __vo uint32_t   P_X_DIR;
+    __vo uint32_t   P_Y_DIR;
+    __vo uint32_t   P_X_REN;
+    __vo uint32_t   P_Y_REN;
+    __vo uint32_t   P_Y_DS;
+    __vo uint32_t   P_X_SEL0;
+    __vo uint32_t   P_Y_SEL0;
+    __vo uint32_t   P_X_SEL1;
+    __vo uint32_t   P_Y_SEL1;
+    __vo uint32_t   P_X_IV;
+    __vo uint32_t   P_X_SELC;
+    __vo uint32_t   P_Y_SELC;
+    __vo uint32_t   P_X_IES;
+    __vo uint32_t   P_Y_IES;
+    __vo uint32_t   P_X_IE;
+    __vo uint32_t   P_Y_IE;
+    __vo uint32_t   P_X_IFG;
+    __vo uint32_t   P_Y_IFG;
+    __vo uint32_t   P_Y_IV;
+}PORT_RegDef_t;
+
+
 #endif /*DRIVERS_INC_MSP432P401R_H_*/

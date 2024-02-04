@@ -1,7 +1,9 @@
 #ifndef DRIVERS_INC_MSP432P401R_H_
 #define DRIVERS_INC_MSP432P401R_H_
 
+#include <stdint.h>
 
+#define __vo volatile
 
 #define FLASH_BASEADDR
 #define SRAM_BASEADDR                   0x20000000U

@@ -58,7 +58,6 @@
 #define USART6_BASEADDR					(APB2PERPH_BASEADDR + 0x1400)
 
 
-
 /****************************** peripheral register definition structures ********************/
 
 /*
@@ -82,6 +81,18 @@ typedef struct
 	__vo uint32_t	AFR[2];			//GPIO alternate function register
 }GPIO_RegDef_t;
 
+/*
+ * peripheral definitions (peripheral base addresses type casted to xxx_RegDef_t)
+ */
+#define GPIOA ((GPIO_RegDef_t*) GPIOA_BASEADDR)
+#define GPIOB ((GPIO_RegDef_t*) GPIOB_BASEADDR)
+#define GPIOC ((GPIO_RegDef_t*) GPIOC_BASEADDR)
+#define GPIOD ((GPIO_RegDef_t*) GPIOD_BASEADDR)
+#define GPIOE ((GPIO_RegDef_t*) GPIOE_BASEADDR)
+#define GPIOF ((GPIO_RegDef_t*) GPIOF_BASEADDR)
+#define GPIOG ((GPIO_RegDef_t*) GPIOG_BASEADDR)
+#define GPIOH ((GPIO_RegDef_t*) GPIOH_BASEADDR)
+#define GPIOI ((GPIO_RegDef_t*) GPIOI_BASEADDR)
 
 
 #endif /* INC_STM32F407XX_H_ */

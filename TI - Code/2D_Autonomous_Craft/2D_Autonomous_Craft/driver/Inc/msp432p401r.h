@@ -49,7 +49,7 @@
  * Note: As each set of ports refers to a pair of ports 1/2, 3/4, 5/6, 7/8, 9/10, the struct has been set to refer to port X (odd numbers) and port Y
  * (even numbers). This allows for all ports to be referenced cleanly and easily
  */
-typedef struct \
+typedef struct
 {
     __vo uint32_t   P_X_IN;
     __vo uint32_t   P_Y_IN;
@@ -75,6 +75,12 @@ typedef struct \
     __vo uint32_t   P_Y_IFG;
     __vo uint32_t   P_Y_IV;
 }PORT_RegDef_t;
+
+#define PORT1_2  ((PORT_RegDef_t*) PORT_1-2_BASEADDR)
+#define PORT3_4  ((PORT_RegDef_t*) PORT_3-4_BASEADDR)
+#define PORT5_6  ((PORT_RegDef_t*) PORT_5-6_BASEADDR)
+#define PORT7_8  ((PORT_RegDef_t*) PORT_7-8_BASEADDR)
+#define PORT9_10 ((PORT_RegDef_t*) PORT_9-10_BASEADDR)
 
 
 #endif /*DRIVERS_INC_MSP432P401R_H_*/

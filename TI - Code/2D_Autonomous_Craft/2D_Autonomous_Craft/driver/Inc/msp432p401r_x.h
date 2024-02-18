@@ -15,11 +15,11 @@
 
 /*Base addresses of peripherals */
 #define PORT_REG_BASEADDR               0x40004C00U //Port registers base address
-#define PORT_1-2_BASEADDR               (PORT_REG_BASEADDR + 0x000)
-#define PORT_3-4_BASEADDR               (PORT_REG_BASEADDR + 0x020)
-#define PORT_5-6_BASEADDR               (PORT_REG_BASEADDR + 0x040)
-#define PORT_7-8_BASEADDR               (PORT_REG_BASEADDR + 0x060)
-#define PORT_9-10_BASEADDR              (PORT_REG_BASEADDR + 0x080)
+#define PORT_1_2_BASEADDR               (PORT_REG_BASEADDR + 0x000)
+#define PORT_3_4_BASEADDR               (PORT_REG_BASEADDR + 0x020)
+#define PORT_5_6_BASEADDR               (PORT_REG_BASEADDR + 0x040)
+#define PORT_7_8_BASEADDR               (PORT_REG_BASEADDR + 0x060)
+#define PORT_9_10_BASEADDR              (PORT_REG_BASEADDR + 0x080)
 
 #define I2CB0_BASEADDR                  (PERIPH_BASEADDR + 0x2000)
 #define I2CB1_BASEADDR                  (PERIPH_BASEADDR + 0x2400)

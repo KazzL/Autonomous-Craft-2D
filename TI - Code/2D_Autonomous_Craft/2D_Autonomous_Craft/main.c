@@ -1,5 +1,5 @@
 //#include "msp.h"
-#include "msp432p401r.h"
+#include "msp432p401r_x.h"
 
 /**
  * main.c
